@@ -5,6 +5,8 @@ const app = express();
 // Body Parser
 app.use(express.json());
 
+app.get("/", (req, res) => res.send("Site is up"));
+
 // routes
 app.use("/api/clinics", require("./routes/clinics"));
 app.use("/api/consultations", require("./routes/consultations"));
